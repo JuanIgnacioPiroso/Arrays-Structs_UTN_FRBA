@@ -13,7 +13,6 @@ struct Empleados
     int telefono;
     char sexo[1];
     int edad;
-
 };
 
 void imprimirMenuEmpleados()
@@ -73,49 +72,40 @@ void imprimirDatosEmpleado(Empleados empleados[], int cantidad)
     }
 }
 
-
 int main()
 {
 
     int dni = 0;
 
     Empleados vecEmpleados[25] = {
-        {
-            12345678,
-            "Juan",
-            "Soltero",
-            "Av. Siempre Viva 123",
-            123456789,
-            'M',
-            20
-        },
-        {
-            98765432,
-            "Pedra",
-            "Casado",
-            "Av Principal 123",
-            123098645,
-            'F',
-            30
-        },
-        {
-            147833112,
-            "Juana",
-            "Soltera",
-            "Av. Algo 123",
-            197346213,
-            'F',
-            65
-        },
-        {
-            7645321,
-            "Rocio",
-            "Mancuerna",
-            "Av. Siempre Viva 123",
-            13213454,
-            'F',
-            28
-        },
+        {12345678,
+         "Juan",
+         "Soltero",
+         "Av. Siempre Viva 123",
+         123456789,
+         'M',
+         20},
+        {98765432,
+         "Pedra",
+         "Casado",
+         "Av Principal 123",
+         123098645,
+         'F',
+         30},
+        {147833112,
+         "Juana",
+         "Soltera",
+         "Av. Algo 123",
+         197346213,
+         'F',
+         65},
+        {7645321,
+         "Rocio",
+         "Mancuerna",
+         "Av. Siempre Viva 123",
+         13213454,
+         'F',
+         28},
     };
 
     int lenEmpleados = 4;
@@ -129,22 +119,19 @@ int main()
     {
         switch (opcion)
         {
-            case 1:
-                cout << "Listado de empleados que estan proximos a jubilarse ordenados alfabeticomente: " << endl;
-                listadoEmpleadosProximosAJubilarse(vecEmpleados, lenEmpleados);
-                break;
-            case 2:
-                cout << "Edad promedio de los empleados: " << endl;
-                cout << edadPromedioEmpleados(vecEmpleados, lenEmpleados) << endl;
-                break;
-            case 3:
-                cout << "Datos totales del empleado" << endl;
-                imprimirDatosEmpleado(vecEmpleados, lenEmpleados);
-                break;
+        case 1:
+            cout << "Listado de empleados que estan proximos a jubilarse ordenados alfabeticomente: " << endl;
+            listadoEmpleadosProximosAJubilarse(vecEmpleados, lenEmpleados);
+            break;
+        case 2:
+            cout << "Edad promedio de los empleados: " << endl;
+            cout << edadPromedioEmpleados(vecEmpleados, lenEmpleados) << endl;
+            break;
+        case 3:
+            cout << "Datos totales del empleado" << endl;
+            imprimirDatosEmpleado(vecEmpleados, lenEmpleados);
+            break;
         }
         cin >> opcion;
     }
-
-    
-
 }
